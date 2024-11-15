@@ -1,1 +1,111 @@
 
+/* Background with gradient */
+body {
+    background: linear-gradient(120deg, #a1c4fd, #c2e9fb); /* Soothing blue gradient */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures it spans the viewport height */
+}
+
+/* Centered container */
+.container {
+    width: 400px;
+    padding: 25px 35px;
+    background: #ffffff;
+    border-radius: 12px; /* Slightly more rounded */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+.container:hover {
+    transform: scale(1.02); /* Subtle scaling on hover */
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Text heading */
+.container p {
+    font-weight: 700; /* Slightly lighter for a cleaner look */
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Input styling */
+.container input {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #6a8bfe; /* Softer border color */
+    padding: 10px;
+    margin: 10px 0px 20px;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container input:focus {
+    border-color: #4c6bfe;
+    box-shadow: 0px 0px 8px rgba(76, 107, 254, 0.5); /* Glow effect on focus */
+}
+
+/* Button styling */
+.container button {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(90deg, #6a8bfe, #4959ff); /* Gradient button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.container button:hover {
+    background: linear-gradient(90deg, #4c6bfe, #3248ff); /* Darker gradient on hover */
+    box-shadow: 0px 4px 10px rgba(76, 107, 254, 0.3); /* Button shadow effect */
+}
+
+.container button:active {
+    transform: translateY(2px);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Image box styling */
+#imgBox {
+    width: 200px;
+    margin: 15px auto;
+    overflow: hidden;
+    border-radius: 8px; /* Rounded corners for the image container */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#imgBox img {
+    width: 100%;
+    border-radius: 8px; /* Matches the container's border-radius */
+    padding: 0;
+    display: block;
+    transition: transform 0.3s ease; /* Smooth zoom-in animation */
+}
+
+#imgBox img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Animation for error shaking */
+.error {
+    animation: horizontal-shaking 0.15s ease-in-out 3; /* Smooth shaking */
+}
+
+@keyframes horizontal-shaking {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+}
